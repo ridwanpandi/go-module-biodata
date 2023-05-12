@@ -3,7 +3,7 @@ package go_module_biodata
 type Biodata interface {
 	GetName() string
 	GetAddress() string
-	GetAge() string
+	GetAge() int
 }
 
 func GetBiodata(bio Biodata) map[string]interface{} {
