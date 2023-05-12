@@ -1,15 +1,15 @@
 package go_module_biodata
 
-type Biodata struct {
-	Nama   string
-	Alamat string
-	Umur   int
+type Biodata interface {
+	GetName() string
+	GetAddress() string
+	GetAge() string
 }
 
-func (bio Biodata) GetBiodata() map[string]interface{} {
+func GetBiodata(bio Biodata) map[string]interface{} {
 	return map[string]interface{}{
-		"nama":   bio.Nama,
-		"alamat": bio.Alamat,
-		"umur":   bio.Umur,
+		"nama":   bio.GetName(),
+		"alamat": bio.GetAddress(),
+		"umur":   bio.GetAge(),
 	}
 }
